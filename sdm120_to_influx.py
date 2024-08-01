@@ -3,11 +3,10 @@ import serial
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 import time
-import os
 
 # InfluxDB configurations
 influxdb_url = "http://localhost:8086"  # Replace with your InfluxDB URL
-influxdb_token = os.getenv("INFLUXDB_TOKEN")  # Fetch the token from the environment
+influxdb_token = "k58HrZGegHYF-D28Pr14U4l7fP3ODT1-vieSA9E9pWKXroKn0AW4OFnJLAfDGRBmcSW_-1c89GVkas3AoFlCMA=="  # Fetch the token from the environment
 influxdb_org = "maakleerplek vzw"  # Replace with your InfluxDB organization
 influxdb_bucket = "db_meters"  # Replace with your InfluxDB bucket
 
