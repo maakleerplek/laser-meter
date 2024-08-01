@@ -6,10 +6,15 @@ import time
 import os
 
 # InfluxDB configurations
-influxdb_url = os.getenv("INFLUXDB_URL")  # Replace with your InfluxDB URL
-influxdb_token = os.getenv("INFLUXDB_TOKEN")  # Fetch the token from the environment
-influxdb_org = os.getenv("INFLUXDB_ORG")  # Replace with your InfluxDB organization
-influxdb_bucket = os.getenv("INFLUXDB_BUCKET")  # Replace with your InfluxDB bucket
+# influxdb_url = os.getenv("INFLUXDB_URL")  # Replace with your InfluxDB URL
+# influxdb_token = os.getenv("INFLUXDB_TOKEN")  # Fetch the token from the environment
+# influxdb_org = os.getenv("INFLUXDB_ORG")  # Replace with your InfluxDB organization
+# influxdb_bucket = os.getenv("INFLUXDB_BUCKET")  # Replace with your InfluxDB bucket
+
+influxdb_url = 'http://localhost:8086/'  # Replace with your InfluxDB URL
+influxdb_token = 'k58HrZGegHYF-D28Pr14U4l7fP3ODT1-vieSA9E9pWKXroKn0AW4OFnJLAfDGRBmcSW_-1c89GVkas3AoFlCMA=='  # Fetch the token from the environment
+influxdb_org = 'maakleerplek vzw'  # Replace with your InfluxDB organization
+influxdb_bucket = 'db_meters'  # Replace with your InfluxDB bucket
 
 # SDM120 Modbus configuration
 sdm120_address = 1  # Modbus address of your SDM120
