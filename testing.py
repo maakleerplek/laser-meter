@@ -9,7 +9,7 @@ import os
 influxdb_url = "http://localhost:8086"  # Replace with your InfluxDB URL
 influxdb_token = os.getenv("INFLUXDB_TOKEN")  # Fetch the token from the environment
 influxdb_org = "maakleerplek vzw"  # Replace with your InfluxDB organization
-influxdb_bucket = os.getenv("INFLUXDB_BUCKET")  # Replace with your InfluxDB bucket
+influxdb_bucket = 'db_meters'  # Replace with your InfluxDB bucket
 
 # SDM120 Modbus configuration
 sdm120_address = 1  # Modbus address of your SDM120
