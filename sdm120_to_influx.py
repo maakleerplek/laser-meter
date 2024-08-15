@@ -61,7 +61,7 @@ def write_to_influxdb(voltage, current, power):
 	
     if power < 195:
         working = 0
-    elif power >= 195 && power <= 560:
+    elif power >= 195 and power <= 560:
         working = 1
     elif power > 700:
         working = 1
