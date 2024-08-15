@@ -58,7 +58,17 @@ def write_to_influxdb(voltage, current, power):
 
     # Get the current time in UTC
     current_time = time.time_ns()  # Time in nanoseconds
-
+	
+    if power < 195:
+        working = 0
+    elif power >= 195 && power <= 560:
+        working = 1
+    elif power > 700:
+        working = 1
+    else:
+    	working = 0
+        
+    
     # Create a Point with data
     point = (
         Point("energy_data")
@@ -66,6 +76,7 @@ def write_to_influxdb(voltage, current, power):
         .field("voltage", voltage)
         .field("current", current)
         .field("power", power)
+        .field("working", working)
         .time(current_time, WritePrecision.NS)
     )
 
